@@ -3,8 +3,9 @@
 ; Run/Execute:          ./hello32
 
 section .data
-    ; message with newline 0xA, this indicates where the string ends
+    ; message with newline 0xA, 
     msg db "Hello, World!", 0xA
+    
 
     ;length of message
     ;Subtract the start address of msg from the current address.
@@ -31,7 +32,7 @@ _start:
     mov ebx, 1        ; file descriptor (stdout)
     mov ecx, msg      ; address of message
     mov edx, len      ; message length
-    int 0x80          ; call kernel
+    int 0x80          ; call kernel; asks Linux kernel to perform the system call
 
     mov eax, 1        ; syscall number (sys_exit)
     xor ebx, ebx      ; status 0
