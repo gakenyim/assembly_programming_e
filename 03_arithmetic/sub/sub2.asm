@@ -1,3 +1,6 @@
+; Assemble the file   : nasm -f elf32 sub2.asm -o sub2.o
+; Link                : ld -m elf_i386 sub2.o -o sub2
+; Run/Execute         : ./sub2
 ; sub16.asm
 section .data
     num1 dw 1000

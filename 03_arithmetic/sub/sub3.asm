@@ -1,3 +1,6 @@
+; Assemble the file   : nasm -f elf32 sub3.asm -o sub3.o
+; Link                : ld -m elf_i386 sub3.o -o sub3
+; Run/Execute         : ./sub3
 ; sbb.asm
 section .data
     num1 dw 0x0000

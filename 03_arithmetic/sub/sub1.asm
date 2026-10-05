@@ -1,3 +1,6 @@
+; Assemble the file   : nasm -f elf32 sub1.asm -o sub1.o
+; Link                : ld -m elf_i386 sub1.o -o sub1
+; Run/Execute         : ./sub1
 ; sub8.asm
 section .data
     num1 db 50   ; 00110010
