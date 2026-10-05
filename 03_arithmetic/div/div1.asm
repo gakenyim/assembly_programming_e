@@ -1,3 +1,6 @@
+; Assemble the file   : nasm -f elf32 div1.asm -o div1.o
+; Link                : ld -m elf_i386 div1.o -o div1 
+; Run/Execute         : ./div1
 ; al = quotient, ah = remainder
 
 section .data

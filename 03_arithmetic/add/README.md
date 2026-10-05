@@ -15,7 +15,7 @@ In binary:
       01111000(120)  + 00001010(10) = 10000010(130)
 GDB confirmed that the result in AL was `0x82`, which is 130 in decimal.
 
-### EFLAGS Analysis
+| Flag | Status | Explanation 
 
 1. CF - Cleared (0):The result 130 fits within the unsigned 8-bit range of 0–255, so there is no carry out of bit 7. 
 2. PF - Set (1): The low byte of the result is `10000010`, which contains two 1-bits. Since two is even, PF is set. 
