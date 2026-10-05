@@ -1,3 +1,6 @@
+; Assemble the file   : nasm -f elf32 mul3.asm -o mul3.o
+; Link                : ld -m elf_i386 mul3.o -o mul3 
+; Run/Execute         : ./mul3
 ; 
 section .data
     num1 dd 100000

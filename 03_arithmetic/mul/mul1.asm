@@ -1,3 +1,6 @@
+; Assemble the file   : nasm -f elf32 mul1.asm -o mul1.o
+; Link                : ld -m elf_i386 mul1.o -o mul1 
+; Run/Execute         : ./mul1
 ; mul_byte.asm
 section .data
     num1 db 25
