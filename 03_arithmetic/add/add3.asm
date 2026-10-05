@@ -1,3 +1,6 @@
+; Assemble the file   : nasm -f elf32 add3.asm -o add3.o
+; Link                : ld -m elf_i386 add3.o -o add3 
+; Run/Execute         : ./add3
 section .data
     num1 dw 0xFFFF ; 1111111111111111   65535
     num2 dw 1
