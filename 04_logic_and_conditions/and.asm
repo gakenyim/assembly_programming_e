@@ -1,6 +1,6 @@
-; nasm -f elf32 hello_world_32.asm -o hello_world_32.o
-; ld -m elf_i386 -o hello32 hello_world_32.o
-; ./hello32
+; nasm -f elf32 and.asm -o and.o
+; ld -m elf_i386 -o and and.o
+; ./and
 
 section .data
     val1 db 0b10101010   ; 170 decimal
@@ -21,3 +21,15 @@ _start:
     mov eax, 1     ;sys call number to exit
     xor ebx, ebx   ; 0 for successful exit
     int 0x80       ; invoke call
+
+    ## result
+; ;Breakpoint 1, 0x08049000 in _start ()
+; (gdb) si
+; 0x08049005 in _start ()
+; (gdb) si
+; 0x0804900b in _start ()
+; (gdb) si
+; 0x0804900d in _start ()
+; (gdb) info registers al bl
+; al             0x88                -120 - signed 8-bit decimal  136 - unsigned 8-bit decimal
+; bl             0xcc                -52 - signed 8-bit decimal  204 - unsigned 8-bit decimal
