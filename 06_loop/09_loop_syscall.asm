@@ -1,3 +1,7 @@
+; nasm -f elf64 09_loop_syscall.asm -o 09_loop_syscall.o
+; ld -m elf_x86_64 -o 09_loop_syscall 09_loop_syscall.o
+; ./09_loop_syscall
+
 section .data
     message db "Hello, Assembly!", 10
     length equ $ - message
@@ -24,3 +28,12 @@ repeat:
     mov rax, 60
     xor rdi, rdi
     syscall
+
+    ##result
+   ; miche@MGs-LAPTOP:~/assembly_programming_e/06_loop$ ./09_loop_syscall
+   ; Hello, Assembly!
+   ; Hello, Assembly!
+   ; Hello, Assembly!
+   ; Hello, Assembly!
+   ; Hello, Assembly!
+   ; miche@MGs-LAPTOP:~/assembly_programming_e/06_loop$ 
