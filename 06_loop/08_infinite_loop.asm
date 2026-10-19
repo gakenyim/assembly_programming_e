@@ -1,3 +1,7 @@
+; nasm -f elf64 08_infinite_loop.asm -o 08_infinite_loop.o
+; ld -m elf_x86_64 -o 08_infinite_loop 08_infinite_loop.o
+; ./08_infinite_loop
+
 section .data
     message db "Running...", 10
     length equ $ - message
@@ -14,3 +18,6 @@ repeat:
     syscall
 
     jmp repeat                 ; Jump back unconditionally
+
+    ##result
+    ;the message running... loops an infinite amount of times and can stop it by pressing Ctrl+C
