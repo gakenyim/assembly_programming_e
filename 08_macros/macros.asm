@@ -1,3 +1,6 @@
+; nasm -f elf64 macros.asm -o macros.o
+; ld macros.o -o macros
+; ./macros
 section .data
     msg1 db "start ...", 10
     len1 equ $ - msg1
@@ -32,4 +35,9 @@ _start:
     mov eax, 60
     xor edi, edi
     syscall
+
+    ## End of program ##
+;miche@MGs-LAPTOP:~/assembly_programming_e/08_macros$ ./macros
+; start ...
+; stop ...
 
