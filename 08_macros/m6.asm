@@ -1,3 +1,6 @@
+; nasm -f elf64 m6.asm -o m6.o
+; ld m6.o -o m6
+; ./m6
 section .data
     msg db "Program completed successfully.", 10
     len equ $ - msg
@@ -23,3 +26,7 @@ _start:
     PRINT msg, len
 
     EXIT_PROGRAM 0
+
+    ## End of program ##
+;     miche@MGs-LAPTOP:~/assembly_programming_e/08_macros$ ./m6
+; Program completed successfully.
