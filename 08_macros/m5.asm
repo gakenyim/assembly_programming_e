@@ -1,3 +1,6 @@
+; nasm -f elf64 m5.asm -o m5.o
+; ld m5.o -o m5
+; ./05
 section .data
     msg db "Register operations completed.", 10
     len equ $ - msg
@@ -35,3 +38,7 @@ _start:
     mov rax, 60
     xor rdi, rdi
     syscall
+
+    ## End of program ##
+; miche@MGs-LAPTOP:~/assembly_programming_e/08_macros$ ./m5
+; Register operations completed.
