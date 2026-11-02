@@ -1,3 +1,6 @@
+; nasm -f elf64 m1.asm -o m1.o
+; ld m1.o -o m1
+; ./m1 to run the program
 section .data
     msg1 db "Welcome to Assembly!", 10
     len1 equ $ - msg1
@@ -10,7 +13,8 @@ section .data
 
 section .text
     global _start
-
+; A macro is a reusable piece of assembly code
+; PRINT macro prints a message to the standard output
 %macro PRINT 2
     mov rax, 1
     mov rdi, 1
@@ -27,3 +31,9 @@ _start:
     mov rax, 60
     xor rdi, rdi
     syscall
+
+    ## End of program ##
+; miche@MGs-LAPTOP:~/assembly_programming_e/08_macros$ ./m1
+; Welcome to Assembly!
+; Learning NASM macros.
+; One macro, multiple messages.
