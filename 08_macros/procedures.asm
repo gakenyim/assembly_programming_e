@@ -1,3 +1,6 @@
+; nasm -f elf64 procedures.asm -o procedures.o
+; ld procedures.o -o procedures
+; ./procedures
 section .data
     msg1 db "start ...", 10
     len1 equ $ - msg1
@@ -38,3 +41,8 @@ _start:
     mov rax, 60
     xor rdi, rdi
     syscall
+
+    ## End of program ##
+;miche@MGs-LAPTOP:~/assembly_programming_e/08_macros$ ./procedures
+; start ...
+; stop ...
