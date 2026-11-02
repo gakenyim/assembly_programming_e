@@ -1,3 +1,6 @@
+; nasm -f elf64 m2.asm -o m2.o
+; ld m2.o -o m2
+; ./m2 to run the program
 section .data
     msg1 db "Addition: "
     len1 equ $ - msg1
@@ -80,3 +83,8 @@ _start:
     mov rax, 60
     xor rdi, rdi
     syscall
+
+    ## End of program ##
+; miche@MGs-LAPTOP:~/assembly_programming_e/08_macros$ ./m2
+; Addition: 40
+; Subtraction: 30
