@@ -1,3 +1,9 @@
+; nasm -f elf64 m7.asm -o m7.o
+; ld m7.o -o m7
+; ./m7
+; Expected output:
+; First line
+; Second line
 section .data
     msg1 db "First line"
     len1 equ $ - msg1
@@ -32,3 +38,8 @@ _start:
     mov rax, 60
     xor rdi, rdi
     syscall
+
+    ## End of program ##
+;miche@MGs-LAPTOP:~/assembly_programming_e/08_macros$ ./m7
+; First line
+; Second line
