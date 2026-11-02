@@ -1,3 +1,6 @@
+; nasm -f elf64 m3.asm -o m3.o
+; ld m3.o -o m3
+; ./m3 to run the program
 section .data
     zero_msg db "Number is zero.", 10
     zero_len equ $ - zero_msg
@@ -43,3 +46,9 @@ _start:
     mov rax, 60
     xor rdi, rdi
     syscall
+
+    ## End of program ##
+; miche@MGs-LAPTOP:~/assembly_programming_e/08_macros$ ./m3
+; Number is zero.
+; Number is not zero.
+; Number is not zero.
