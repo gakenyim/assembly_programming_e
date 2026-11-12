@@ -13,14 +13,15 @@ call work -> the CALL instruction pushes the return address onto the stack and t
 push rbp saves the previous base pointer.
 mov rbp, rsp establishes a reference point for local variables
 sub rsp, 16 reserves 16 bytes of stack space for two variables
+
 ![alt text](image-4.png)
-(gdb) si
 ![alt text](image-5.png)
 
 ### Storing local variables
 mov qword [rbp - 8], 100
 mov qword [rbp - 16], 200
 The program stores 100 and 200 in the allocated stack space, using rbp-relative addresses
+
 ![alt text](image-6.png)
 
 ### Retrieving values
