@@ -20,6 +20,7 @@ pop ebx - the first POP retrieves 0x1234 into ebx, esp increases by 4 bytes
 ![alt text](image-30.png)
 
 pop eax - the next POP retrieves 0x11223344 into eax, esp increases by another 4 bytes
+
 ![alt text](image-31.png)
 
 ### Program termination
